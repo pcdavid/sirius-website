@@ -5,7 +5,7 @@ title: Sirius | Gallery
 <section class="bg_lightest_grey text-center intro">
     <div class="container">
             {% include block_heading.html
-                title="What Can You Do with Sirius?"                
+                title="What Can You Do with Sirius?"
                 sub_title=""
                 desc="Discover concrete examples of modeling tools created with Sirius for various use-cases:<br>Systems Engineering, Software Development, Business Configuration, etc."
             %}
@@ -32,7 +32,7 @@ title: Sirius | Gallery
             var infos = " ";
 
            medias += "<div class='medias' id='" + data.usecases[i].infos.title + "'><div class='popup-gallery-" + i + "'><a href='" + data.usecases[i].medias.mainSrc + "' title='" + data.usecases[i].medias.mainSrc + "'><img class='shadow' src='" + data.usecases[i].medias.mainSrc + "' alt='" + data.usecases[i].medias.imgAlt + "' width='520' /></a></div>";
-           
+
             if(data.usecases[i].medias.thumbs.length < 1){
                 thumblist += "<div class='thumbs'><ul>";
             }
@@ -40,11 +40,11 @@ title: Sirius | Gallery
             thumblist += "<div class='thumbs popup-gallery-" + i + "'><ul>";
             for (var t in data.usecases[i].medias.thumbs) {
                 thumb += "<li class='thumb-" + t + "'><a href='" + data.usecases[i].medias.thumbs[t].src + "'><img class='shadow' src='" + data.usecases[i].medias.thumbs[t].src + "' alt='" + data.usecases[i].medias.thumbs[t].src + "' width='60' /></a></li>";
-                
+
             }
             }
         thumblist += thumb + "</ul></div>";
-        
+
         medias += thumblist + "</div>";
 
             title += "<div><h2>" + data.usecases[i].infos.title + "</h2></div>";
@@ -70,13 +70,13 @@ title: Sirius | Gallery
 
             infos += "<div class='col-md-6'>" + title + author + taglist + descr + lnklist +"</div>";
             output += "<section><div class='container'><div class='row usecase'>" + infos + medias + "</div></div></div></section>";
-        
+
         }
 
         document.getElementById("usecases").innerHTML=output;
-        
+
         for (var n in data.usecases) {
-            
+
             $('.popup-gallery-' + n).magnificPopup({
                 delegate: 'a',
                 type: 'image',
@@ -94,15 +94,15 @@ title: Sirius | Gallery
                         return data.usecases[usecaseIndex].infos.title;
                     }
                 }
-            });	
-        }			
+            });
+        }
       });
    </script>
 
 <section class="bg_lightest_grey text-center intro">
     <div class="container">
             {% include block_heading.html
-                title="Your modeling tool created with Sirius is not listed here?"                
+                title="Your modeling tool created with Sirius is not listed here?"
                 sub_title=""
                 desc="Feel free to submit your work here: <a href=\"https://bugs.eclipse.org/bugs/show_bug.cgi?id=448492\">Bugzilla 448492</a>."
             %}
